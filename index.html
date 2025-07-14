@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comunidad Vecinal Tilisarao - Unidos por Nuestra Ciudad</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .pulse-animation {
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+        .whatsapp-green {
+            background-color: #25D366;
+        }
+        .whatsapp-green:hover {
+            background-color: #128C7E;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="gradient-bg text-white">
+        <div class="container mx-auto px-4 py-6">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-3">
+                    <i class="fas fa-home text-3xl"></i>
+                    <div>
+                        <h1 class="text-2xl font-bold">Comunidad Vecinal Tilisarao</h1>
+                        <p class="text-blue-100">Unidos por nuestra ciudad</p>
+                    </div>
+                </div>
+                <div class="text-right">
+                    <p class="text-sm text-blue-100">Administrador</p>
+                    <p class="font-semibold">Martín Gonzales</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="py-12 bg-white">
+        <div class="container mx-auto px-4 text-center">
+            <div class="max-w-3xl mx-auto">
+                <i class="fas fa-users text-6xl text-blue-600 mb-6"></i>
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">
+                    Bienvenido a Nuestra Comunidad
+                </h2>
+                <p class="text-xl text-gray-600 mb-8">
+                    Un espacio digital donde los vecinos de Tilisarao nos conectamos, ayudamos y fortalecemos nuestra comunidad. 
+                    Únete a nuestro grupo de WhatsApp para estar siempre comunicado.
+                </p>
+                <a href="https://chat.whatsapp.com/ENLACE_DEL_GRUPO" target="_blank" 
+                   class="inline-flex items-center space-x-3 whatsapp-green text-white px-8 py-4 rounded-full text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 pulse-animation">
+                    <i class="fab fa-whatsapp text-2xl"></i>
+                    <span>Unirse al Grupo de WhatsApp</span>
+                </a>
+                <p class="text-sm text-gray-500 mt-4">
+                    <i class="fas fa-shield-alt"></i> Grupo moderado por Martín Gonzales
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h3 class="text-3xl font-bold text-gray-800 mb-4">¿Cómo nos ayudamos?</h3>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Nuestra comunidad está aquí para apoyarnos mutuamente en diferentes situaciones
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Emergencias -->
+                <div class="bg-white rounded-xl p-6 shadow-lg card-hover">
+                    <div class="text-center">
+                        <div class="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-exclamation-triangle text-2xl text-red-600"></i>
+                        </div>
+                        <h4 class="text-xl font-semibold text-gray-800 mb-3">Emergencias</h4>
+                        <p class="text-gray-600 mb-4">
+                            Reporta situaciones urgentes, cortes de servicios, o solicita ayuda inmediata de tus vecinos.
+                        </p>
+                        <div class="text-sm text-gray-500">
+                            <i class="fas fa-clock"></i> Respuesta inmediata
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Profesionales -->
+                <div class="bg-white rounded-xl p-6 shadow-lg card-hover">
+                    <div class="text-center">
+                        <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-tools text-2xl text-blue-600"></i>
+                        </div>
+                        <h4 class="text-xl font-semibold text-gray-800 mb-3">Profesionales</h4>
+                        <p class="text-gray-600 mb-4">
+                            Recomendaciones de plomeros, electricistas, mecánicos y otros servicios confiables del barrio.
+                        </p>
+                        <div class="text-sm text-gray-500">
+                            <i class="fas fa-star"></i> Recomendados por vecinos
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Seguridad -->
+                <div class="bg-white rounded-xl p-6 shadow-lg card-hover">
+                    <div class="text-center">
+                        <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-shield-alt text-2xl text-green-600"></i>
+                        </div>
+                        <h4 class="text-xl font-semibold text-gray-800 mb-3">Seguridad</h4>
+                        <p class="text-gray-600 mb-4">
+                            Alertas de seguridad, vigilancia vecinal y coordinación para mantener nuestro barrio seguro.
+                        </p>
+                        <div class="text-sm text-gray-500">
+                            <i class="fas fa-eye"></i> Vigilancia comunitaria
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Eventos -->
+                <div class="bg-white rounded-xl p-6 shadow-lg card-hover">
+                    <div class="text-center">
+                        <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-calendar-alt text-2xl text-purple-600"></i>
+                        </div>
+                        <h4 class="text-xl font-semibold text-gray-800 mb-3">Eventos</h4>
+                        <p class="text-gray-600 mb-4">
+                            Organización de eventos comunitarios, reuniones vecinales y actividades para toda la familia.
+                        </p>
+                        <div class="text-sm text-gray-500">
+                            <i class="fas fa-users"></i> Participación comunitaria
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Intercambio -->
+                <div class="bg-white rounded-xl p-6 shadow-lg card-hover">
+                    <div class="text-center">
+                        <div class="bg-yellow-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-exchange-alt text-2xl text-yellow-600"></i>
+                        </div>
+                        <h4 class="text-xl font-semibold text-gray-800 mb-3">Intercambio</h4>
+                        <p class="text-gray-600 mb-4">
+                            Compra, venta, intercambio de productos entre vecinos. Apoya el comercio local.
+                        </p>
+                        <div class="text-sm text-gray-500">
+                            <i class="fas fa-handshake"></i> Comercio vecinal
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Información -->
+                <div class="bg-white rounded-xl p-6 shadow-lg card-hover">
+                    <div class="text-center">
+                        <div class="bg-indigo-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-info-circle text-2xl text-indigo-600"></i>
+                        </div>
+                        <h4 class="text-xl font-semibold text-gray-800 mb-3">Información</h4>
+                        <p class="text-gray-600 mb-4">
+                            Noticias del barrio, horarios de servicios públicos, y toda la información útil para vecinos.
+                        </p>
+                        <div class="text-sm text-gray-500">
+                            <i class="fas fa-newspaper"></i> Siempre informados
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How it Works -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h3 class="text-3xl font-bold text-gray-800 mb-4">¿Cómo funciona?</h3>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Es muy simple unirse y participar en nuestra comunidad digital
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+                <div class="text-center">
+                    <div class="bg-blue-600 text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">1</div>
+                    <h4 class="text-lg font-semibold mb-2">Únete al Grupo</h4>
+                    <p class="text-gray-600">Haz clic en el botón de WhatsApp y únete a nuestro grupo comunitario</p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-blue-600 text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">2</div>
+                    <h4 class="text-lg font-semibold mb-2">Preséntate</h4>
+                    <p class="text-gray-600">Comparte tu nombre y zona del barrio para que te conozcamos</p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-blue-600 text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">3</div>
+                    <h4 class="text-lg font-semibold mb-2">Participa</h4>
+                    <p class="text-gray-600">Ayuda, pide ayuda, comparte información y fortalece la comunidad</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rules Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-12">
+                    <h3 class="text-3xl font-bold text-gray-800 mb-4">Normas de Convivencia</h3>
+                    <p class="text-gray-600">Para mantener un ambiente respetuoso y útil para todos</p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-white rounded-lg p-6 shadow-md">
+                        <h4 class="text-lg font-semibold text-green-600 mb-3">
+                            <i class="fas fa-check-circle mr-2"></i>Sí permitido
+                        </h4>
+                        <ul class="space-y-2 text-gray-600">
+                            <li><i class="fas fa-check text-green-500 mr-2"></i>Solicitar y ofrecer ayuda</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i>Recomendar profesionales</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i>Reportar emergencias</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i>Compartir información útil</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i>Organizar eventos comunitarios</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg p-6 shadow-md">
+                        <h4 class="text-lg font-semibold text-red-600 mb-3">
+                            <i class="fas fa-times-circle mr-2"></i>No permitido
+                        </h4>
+                        <ul class="space-y-2 text-gray-600">
+                            <li><i class="fas fa-times text-red-500 mr-2"></i>Spam o publicidad excesiva</li>
+                            <li><i class="fas fa-times text-red-500 mr-2"></i>Contenido ofensivo o discriminatorio</li>
+                            <li><i class="fas fa-times text-red-500 mr-2"></i>Discusiones políticas o religiosas</li>
+                            <li><i class="fas fa-times text-red-500 mr-2"></i>Información falsa o rumores</li>
+                            <li><i class="fas fa-times text-red-500 mr-2"></i>Ventas no relacionadas con la comunidad</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Admin -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4 text-center">
+            <div class="max-w-2xl mx-auto">
+                <h3 class="text-3xl font-bold text-gray-800 mb-4">Contacta al Administrador</h3>
+                <p class="text-gray-600 mb-8">
+                    ¿Tienes alguna pregunta o sugerencia? Martín Gonzales está aquí para ayudarte
+                </p>
+                <div class="bg-gray-50 rounded-xl p-6">
+                    <div class="flex items-center justify-center space-x-4 mb-4">
+                        <img src="https://ui-avatars.com/api/?name=Martin+Gonzales&background=667eea&color=fff&size=80" 
+                             alt="Martín Gonzales" class="w-20 h-20 rounded-full">
+                        <div class="text-left">
+                            <h4 class="text-xl font-semibold text-gray-800">Martín Gonzales</h4>
+                            <p class="text-gray-600">Administrador de la Comunidad</p>
+                            <p class="text-sm text-gray-500">Vecino de Tilisarao desde 2010</p>
+                        </div>
+                    </div>
+                    <a href="https://wa.me/5492664548327" target="_blank" 
+                       class="inline-flex items-center space-x-2 whatsapp-green text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>Enviar mensaje privado</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="gradient-bg text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="text-center">
+                <div class="flex items-center justify-center space-x-3 mb-4">
+                    <i class="fas fa-home text-2xl"></i>
+                    <h4 class="text-xl font-bold">Comunidad Vecinal Tilisarao</h4>
+                </div>
+                <p class="text-blue-100 mb-4">Unidos por nuestra ciudad, conectados por la tecnología</p>
+                <div class="flex justify-center space-x-6 mb-4">
+                    <a href="https://chat.whatsapp.com/ENLACE_DEL_GRUPO" target="_blank" 
+                       class="text-blue-100 hover:text-white transition-colors">
+                        <i class="fab fa-whatsapp text-2xl"></i>
+                    </a>
+                    <a href="mailto:martin.gonzales@email.com" 
+                       class="text-blue-100 hover:text-white transition-colors">
+                        <i class="fas fa-envelope text-2xl"></i>
+                    </a>
+                </div>
+                <p class="text-sm text-blue-200">
+                    © 2024 Comunidad Vecinal Tilisarao. Hecho con ❤️ para nuestros vecinos.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <div class="fixed bottom-6 right-6 z-50">
+        <a href="https://chat.whatsapp.com/ENLACE_DEL_GRUPO" target="_blank" 
+           class="whatsapp-green text-white w-16 h-16 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 pulse-animation">
+            <i class="fab fa-whatsapp text-2xl"></i>
+        </a>
+    </div>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add some interactivity to cards
+        document.querySelectorAll('.card-hover').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-5px)';
+            });
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+            });
+        });
+    </script>
+</body>
+</html>
