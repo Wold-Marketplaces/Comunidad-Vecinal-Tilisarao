@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lic. Pablo Fernández - Psicólogo Solidario en Tilisarao</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            background: linear-gradient(135deg, #fbbfef 0%, #818cf8 100%);
+            min-height: 100vh;
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+        }
+        .profile-card {
+            background: #fff;
+            border-radius: 32px;
+            box-shadow: 0 10px 40px -10px #818cf8aa;
+            margin-top: 48px;
+            padding: 48px 32px 32px 32px;
+            max-width: 520px;
+            width: 100%;
+            text-align: center;
+            position: relative;
+        }
+        .profile-pic {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 6px solid #fbbf24;
+            margin-bottom: 18px;
+            box-shadow: 0 4px 24px -4px #fbbf24aa;
+        }
+        .name {
+            font-size: 2rem;
+            color: #764ba2;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+        .title {
+            color: #818cf8;
+            font-size: 1.1rem;
+            margin-bottom: 18px;
+        }
+        .about {
+            color: #444;
+            font-size: 1.08rem;
+            margin-bottom: 24px;
+        }
+        .contact {
+            margin: 24px 0 0 0;
+        }
+        .contact a {
+            display: inline-block;
+            background: linear-gradient(90deg, #38bdf8 0%, #818cf8 100%);
+            color: #fff;
+            font-weight: 700;
+            padding: 14px 28px;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            text-decoration: none;
+            margin: 0 8px 8px 0;
+            box-shadow: 0 4px 16px -4px #38bdf8aa;
+            transition: background 0.2s, transform 0.2s;
+        }
+        .contact a:hover {
+            background: linear-gradient(90deg, #818cf8 0%, #38bdf8 100%);
+            transform: translateY(-2px) scale(1.03);
+        }
+        .gallery {
+            margin: 36px 0 0 0;
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .gallery img {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 18px;
+            box-shadow: 0 2px 12px -2px #818cf855;
+            border: 3px solid #fff;
+            transition: transform 0.2s;
+        }
+        .gallery img:hover {
+            transform: scale(1.07);
+            border-color: #fbbf24;
+        }
+        .quote {
+            margin: 36px 0 0 0;
+            background: #f8fafc;
+            border-radius: 16px;
+            padding: 24px 16px;
+            color: #333;
+            font-style: italic;
+            font-size: 1.1rem;
+            box-shadow: 0 2px 8px -2px #818cf833;
+        }
+        .footer {
+            margin: 48px 0 0 0;
+            color: #818cf8;
+            font-size: 0.95rem;
+        }
+        .badge {
+            position: absolute;
+            top: 24px;
+            right: 24px;
+            background: linear-gradient(90deg, #fbbf24 0%, #38bdf8 100%);
+            color: #fff;
+            font-weight: 700;
+            padding: 8px 18px;
+            border-radius: 16px;
+            font-size: 1rem;
+            box-shadow: 0 2px 8px -2px #fbbf24aa;
+        }
+        .donate {
+            margin: 32px 0 0 0;
+        }
+        .donate a {
+            display: inline-block;
+            background: linear-gradient(90deg, #fbbf24 0%, #38bdf8 100%);
+            color: #fff;
+            font-weight: 700;
+            padding: 14px 28px;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            text-decoration: none;
+            margin: 0 8px 8px 0;
+            box-shadow: 0 4px 16px -4px #fbbf24aa;
+            transition: background 0.2s, transform 0.2s;
+        }
+        .donate a:hover {
+            background: linear-gradient(90deg, #38bdf8 0%, #fbbf24 100%);
+            transform: translateY(-2px) scale(1.03);
+        }
+    </style>
+</head>
+<body>
+    <div class="profile-card">
+        <div class="badge"><i class="fas fa-heartbeat"></i> Psicólogo Solidario</div>
+        <img src="https://randomuser.me/api/portraits/men/77.jpg" alt="Lic. Pablo Fernández" class="profile-pic">
+        <div class="name">Lic. Pablo Fernández</div>
+        <div class="title">Psicólogo comunitario - Tilisarao</div>
+        <div class="about">
+            <p>Apoyo en crisis y emergencias. <br>En catástrofes, brindo contención emocional gratuita a quienes más lo necesitan.<br><br><b>"La empatía es la mejor medicina para el alma"</b></p>
+        </div>
+        <div class="contact">
+            <a href="tel:+5492664000011"><i class="fas fa-phone"></i> +54 9 266 400-0011</a>
+            <a href="https://wa.me/5492664000011" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+            <a href="psicologo-pablo.html" class="bg-pink-500" style="background:linear-gradient(90deg,#fbbfef 0%,#818cf8 100%);color:#fff;"><i class="fas fa-globe"></i> Mi Web</a>
+        </div>
+        <div class="donate">
+            <a href="#" onclick="alert('Para donar, contacta a Pablo por WhatsApp o teléfono. ¡Gracias por tu apoyo!')"><i class="fas fa-donate"></i> Donar para apoyar su labor</a>
+            <div style="font-size:0.95em;color:#764ba2;margin-top:8px;">Tu ayuda permite que más familias reciban apoyo psicológico gratuito en emergencias.</div>
+        </div>
+        <div class="gallery">
+            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Sesión de apoyo">
+            <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80" alt="Escucha activa">
+            <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=400&q=80" alt="Acompañamiento">
+        </div>
+        <div class="quote">
+            "El Lic. Pablo me ayudó a superar el miedo y la angustia tras la tormenta. Eternamente agradecida."<br>
+            <span style="font-size:0.95em;color:#764ba2;">- Testimonio anónimo</span>
+        </div>
+    </div>
+    <div class="footer">
+        <i class="fas fa-leaf"></i> Comunidad Vecinal Tilisarao &bull; Unidos en cuerpo, mente y corazón
+    </div>
+</body>
+</html>

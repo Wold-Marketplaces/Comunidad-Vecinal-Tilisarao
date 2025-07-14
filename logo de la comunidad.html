@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logo Profesional - Comunidad Vecinal Tilisarao</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700;800&display=swap" rel="stylesheet">
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <style>
+        :root {
+            --community-blue: #667eea;
+            --community-purple: #764ba2;
+            --corn-gold: #FBBF24;
+            --corn-amber: #D97706;
+            --leaf-green: #16A34A;
+            --white: #FFFFFF;
+            --text-dark: #1F2937;
+            --bg-light: #F9FAFB;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: var(--bg-light);
+            font-family: 'Poppins', sans-serif;
+            padding: 2rem;
+        }
+
+        .logo-wrapper {
+            width: 450px;
+            height: 450px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #logoCapture {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .logo-background {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--community-blue) 0%, var(--community-purple) 100%);
+            border-radius: 50%;
+            box-shadow: 0 20px 40px -10px rgba(118, 75, 162, 0.4);
+        }
+
+        .logo-foreground {
+            width: 90%;
+            height: 90%;
+            background: var(--white);
+            border-radius: 50%;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: inset 0 0 20px rgba(0,0,0,0.05);
+        }
+
+        .logo-content {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* --- Maíz Estilizado --- */
+        .corn {
+            width: 70px;
+            height: 150px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .corn-cob {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(180deg, var(--corn-gold) 0%, var(--corn-amber) 100%);
+            border-radius: 35px 35px 25px 25px;
+            box-shadow: inset 0 4px 8px rgba(0,0,0,0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .kernels {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            padding: 10px 5px;
+            gap: 4px;
+        }
+
+        .kernel-row {
+            display: flex;
+            justify-content: center;
+            gap: 4px;
+        }
+
+        .kernel {
+            width: 9px;
+            height: 9px;
+            background: var(--corn-gold);
+            border-radius: 50%;
+            box-shadow: inset 0 -1px 2px var(--corn-amber);
+        }
+        .kernel-row:nth-child(even) { padding-left: 5px; }
+
+        .corn-leaf {
+            position: absolute;
+            bottom: -10px;
+            width: 50px;
+            height: 120px;
+            background: linear-gradient(to top, var(--leaf-green), #22c55e);
+            z-index: 5;
+        }
+
+        .leaf-left {
+            left: -25px;
+            border-radius: 40px 0 40px 40px;
+            transform: rotate(-20deg);
+        }
+
+        .leaf-right {
+            right: -25px;
+            border-radius: 0 40px 40px 40px;
+            transform: rotate(20deg);
+        }
+
+        /* --- Vecinos --- */
+        .community-ring {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 8;
+        }
+
+        .neighbor {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            transform-origin: 50% 202.5px; /* Mitad del height del wrapper */
+            width: 30px;
+            height: 40px;
+            margin-left: -15px;
+        }
+
+        .neighbor-head {
+            width: 18px;
+            height: 18px;
+            background: var(--community-blue);
+            border-radius: 50%;
+            margin: 0 auto;
+            border: 2px solid var(--white);
+        }
+
+        .neighbor-body {
+            width: 30px;
+            height: 25px;
+            background: var(--community-blue);
+            border-radius: 15px 15px 0 0;
+            margin-top: -10px;
+        }
+        
+        /* Posicionamiento de los vecinos */
+        .neighbor:nth-child(1) { transform: rotate(0deg); }
+        .neighbor:nth-child(2) { transform: rotate(45deg); }
+        .neighbor:nth-child(3) { transform: rotate(90deg); }
+        .neighbor:nth-child(4) { transform: rotate(135deg); }
+        .neighbor:nth-child(5) { transform: rotate(180deg); }
+        .neighbor:nth-child(6) { transform: rotate(225deg); }
+        .neighbor:nth-child(7) { transform: rotate(270deg); }
+        .neighbor:nth-child(8) { transform: rotate(315deg); }
+
+        .neighbor:nth-child(even) .neighbor-head,
+        .neighbor:nth-child(even) .neighbor-body {
+            background: var(--community-purple);
+        }
+
+        /* --- Texto --- */
+        .logo-text {
+            position: absolute;
+            bottom: 40px;
+            text-align: center;
+            z-index: 20;
+        }
+
+        .main-title {
+            font-size: 32px;
+            font-weight: 800;
+            color: var(--text-dark);
+            letter-spacing: -1px;
+        }
+
+        .subtitle {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--community-blue);
+            text-transform: uppercase;
+        }
+
+        .controls {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .download-btn {
+            background: var(--community-blue);
+            color: var(--white);
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 500;
+            font-size: 14px;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+        }
+        
+        .loading {
+            position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(255,255,255,0.8); display: none;
+            justify-content: center; align-items: center;
+            color: var(--text-dark); font-size: 1.2rem; z-index: 1000;
+        }
+        .loading.active { display: flex; }
+
+    </style>
+</head>
+<body>
+
+    <div class="logo-wrapper">
+        <div id="logoCapture">
+            <div class="logo-background"></div>
+            <div class="logo-foreground">
+                <div class="logo-content">
+                    
+                    <div class="community-ring">
+                        <div class="neighbor"><div class="neighbor-head"></div><div class="neighbor-body"></div></div>
+                        <div class="neighbor"><div class="neighbor-head"></div><div class="neighbor-body"></div></div>
+                        <div class="neighbor"><div class="neighbor-head"></div><div class="neighbor-body"></div></div>
+                        <div class="neighbor"><div class="neighbor-head"></div><div class="neighbor-body"></div></div>
+                        <div class="neighbor"><div class="neighbor-head"></div><div class="neighbor-body"></div></div>
+                        <div class="neighbor"><div class="neighbor-head"></div><div class="neighbor-body"></div></div>
+                        <div class="neighbor"><div class="neighbor-head"></div><div class="neighbor-body"></div></div>
+                        <div class="neighbor"><div class="neighbor-head"></div><div class="neighbor-body"></div></div>
+                    </div>
+
+                    <div class="corn">
+                        <div class="corn-cob">
+                            <div class="kernels">
+                                <div class="kernel-row"> <div class="kernel"></div><div class="kernel"></div><div class="kernel"></div><div class="kernel"></div> </div>
+                                <div class="kernel-row"> <div class="kernel"></div><div class="kernel"></div><div class="kernel"></div> </div>
+                                <div class="kernel-row"> <div class="kernel"></div><div class="kernel"></div><div class="kernel"></div><div class="kernel"></div> </div>
+                                <div class="kernel-row"> <div class="kernel"></div><div class="kernel"></div><div class="kernel"></div> </div>
+                                <div class="kernel-row"> <div class="kernel"></div><div class="kernel"></div><div class="kernel"></div><div class="kernel"></div> </div>
+                                <div class="kernel-row"> <div class="kernel"></div><div class="kernel"></div><div class="kernel"></div> </div>
+                                <div class="kernel-row"> <div class="kernel"></div><div class="kernel"></div><div class="kernel"></div><div class="kernel"></div> </div>
+                                <div class="kernel-row"> <div class="kernel"></div><div class="kernel"></div><div class="kernel"></div> </div>
+                                <div class="kernel-row"> <div class="kernel"></div><div class="kernel"></div><div class="kernel"></div><div class="kernel"></div> </div>
+                            </div>
+                        </div>
+                        <div class="corn-leaf leaf-left"></div>
+                        <div class="corn-leaf leaf-right"></div>
+                    </div>
+
+                    <div class="logo-text">
+                        <div class="main-title">TILISARAO</div>
+                        <div class="subtitle">Comunidad Vecinal</div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="controls">
+        <button class="download-btn" onclick="downloadLogo('png')">Descargar PNG</button>
+        <button class="download-btn" onclick="downloadLogo('jpg')">Descargar JPG</button>
+    </div>
+
+    <div class="loading" id="loadingIndicator">Generando imagen...</div>
+
+    <script>
+        async function downloadLogo(format) {
+            const loadingIndicator = document.getElementById('loadingIndicator');
+            loadingIndicator.classList.add('active');
+            
+            try {
+                const element = document.getElementById('logoCapture');
+                const canvas = await html2canvas(element, {
+                    scale: 6,
+                    useCORS: true,
+                    backgroundColor: null,
+                    logging: false
+                });
+
+                let imageURL;
+                if (format === 'png') {
+                    imageURL = canvas.toDataURL('image/png');
+                } else {
+                    const ctx = canvas.getContext('2d');
+                    ctx.globalCompositeOperation = 'destination-over';
+                    ctx.fillStyle = 'white';
+                    ctx.fillRect(0, 0, canvas.width, canvas.height);
+                    imageURL = canvas.toDataURL('image/jpeg', 1.0);
+                }
+
+                const link = document.createElement('a');
+                link.download = `logo-tilisarao-comunidad.${format}`;
+                link.href = imageURL;
+                link.click();
+            } catch (err) {
+                console.error('Error al generar la imagen:', err);
+                alert('Hubo un error al generar la imagen.');
+            } finally {
+                loadingIndicator.classList.remove('active');
+            }
+        }
+    </script>
+</body>
+</html>

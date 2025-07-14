@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa Interactivo - Tilisarao</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <style>
+        #map { height: 500px; border-radius: 1rem; }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <div class="max-w-4xl mx-auto mt-10 bg-white rounded-xl shadow-lg p-8">
+        <h1 class="text-3xl font-bold text-blue-800 mb-4 flex items-center gap-2"><i class="fas fa-store"></i> Empresas y Comercios Solidarios de Tilisarao</h1>
+        <p class="text-gray-700 mb-6">Conocé los comercios, empresas y personas que apoyan el proyecto comunitario y ayudan a fortalecer la solidaridad en Tilisarao.</p>
+        <div class="bg-blue-50 rounded-lg p-4 mb-8">
+            <h2 class="text-xl font-bold text-blue-700 mb-2 flex items-center gap-2"><i class="fas fa-hand-holding-heart"></i> Empresas que apoyan el proyecto solidario</h2>
+            <p class="text-gray-700 mb-4">Gracias a los comercios y empresas locales que colaboran para que este proyecto comunitario sea posible. ¡Tu empresa también puede sumarse y recibir reconocimiento aquí!</p>
+            <div class="grid md:grid-cols-2 gap-6 mb-6">
+                <!-- Banner ejemplo 1 -->
+                <div class="bg-white rounded-lg shadow flex items-center p-4 gap-4 border-l-8 border-yellow-400">
+                    <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=80&q=80" alt="Panadería La Unión" class="w-20 h-20 rounded-lg object-cover">
+                    <div>
+                        <h3 class="font-bold text-lg text-yellow-800">Panadería La Unión</h3>
+                        <p class="text-gray-700 text-sm mb-1">"Apoyando a los vecinos con pan fresco cada día"</p>
+                        <a href="tel:+5492664000100" class="text-blue-600 font-semibold flex items-center gap-1 text-sm"><i class="fas fa-phone"></i> +54 9 266 400-0100</a>
+                    </div>
+                </div>
+                <!-- Banner ejemplo 2 -->
+                <div class="bg-white rounded-lg shadow flex items-center p-4 gap-4 border-l-8 border-blue-400">
+                    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=80&q=80" alt="Ferretería El Amigo" class="w-20 h-20 rounded-lg object-cover">
+                    <div>
+                        <h3 class="font-bold text-lg text-blue-800">Ferretería El Amigo</h3>
+                        <p class="text-gray-700 text-sm mb-1">"Herramientas y solidaridad para construir comunidad"</p>
+                        <a href="tel:+5492664000200" class="text-blue-600 font-semibold flex items-center gap-1 text-sm"><i class="fas fa-phone"></i> +54 9 266 400-0200</a>
+                    </div>
+                </div>
+                <!-- Banner ejemplo 3 -->
+                <div class="bg-white rounded-lg shadow flex items-center p-4 gap-4 border-l-8 border-green-400">
+                    <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=80&q=80" alt="Verdulería El Sol" class="w-20 h-20 rounded-lg object-cover">
+                    <div>
+                        <h3 class="font-bold text-lg text-green-800">Verdulería El Sol</h3>
+                        <p class="text-gray-700 text-sm mb-1">"Frutas y verduras frescas para todos"</p>
+                        <a href="tel:+5492664000300" class="text-blue-600 font-semibold flex items-center gap-1 text-sm"><i class="fas fa-phone"></i> +54 9 266 400-0300</a>
+                    </div>
+                </div>
+                <!-- Banner ejemplo 4 -->
+                <div class="bg-white rounded-lg shadow flex items-center p-4 gap-4 border-l-8 border-pink-400">
+                    <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=80&q=80" alt="Farmacia Central" class="w-20 h-20 rounded-lg object-cover">
+                    <div>
+                        <h3 class="font-bold text-lg text-pink-800">Farmacia Central</h3>
+                        <p class="text-gray-700 text-sm mb-1">"Salud y acompañamiento solidario"</p>
+                        <a href="tel:+5492664000400" class="text-blue-600 font-semibold flex items-center gap-1 text-sm"><i class="fas fa-phone"></i> +54 9 266 400-0400</a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <a href="https://wa.me/5492664548327" target="_blank" class="inline-flex items-center gap-2 bg-yellow-400 hover:bg-yellow-500 text-yellow-900 font-semibold px-6 py-3 rounded-lg shadow transition"><i class="fab fa-whatsapp"></i> Quiero sumar mi empresa</a>
+            </div>
+        </div>
+        <div class="bg-blue-50 rounded-lg p-4 mb-8">
+            <h2 class="text-xl font-bold text-blue-700 mb-2 flex items-center gap-2"><i class="fas fa-users"></i> Intendente y Funcionarios Públicos</h2>
+            <p class="text-gray-700 mb-4">Conocé a las personas que trabajan por el bienestar de Tilisarao y su contacto para consultas o sugerencias.</p>
+            <div class="grid md:grid-cols-2 gap-6 mb-6">
+                <!-- Intendente ejemplo -->
+                <div class="bg-white rounded-lg shadow flex items-center p-4 gap-4 border-l-8 border-blue-800">
+                    <img src="https://ui-avatars.com/api/?name=Intendente+Perez&background=667eea&color=fff&size=80" alt="Intendente" class="w-20 h-20 rounded-lg object-cover">
+                    <div>
+                        <h3 class="font-bold text-lg text-blue-800">Intendente Juan Pérez</h3>
+                        <p class="text-gray-700 text-sm mb-1">"Comprometido con la transparencia y la participación vecinal"</p>
+                        <a href="mailto:intendente@tilisarao.gob.ar" class="text-blue-600 font-semibold flex items-center gap-1 text-sm"><i class="fas fa-envelope"></i> intendente@tilisarao.gob.ar</a>
+                    </div>
+                </div>
+                <!-- Funcionaria ejemplo -->
+                <div class="bg-white rounded-lg shadow flex items-center p-4 gap-4 border-l-8 border-green-800">
+                    <img src="https://ui-avatars.com/api/?name=Maria+Lopez&background=34d399&color=fff&size=80" alt="Funcionaria" class="w-20 h-20 rounded-lg object-cover">
+                    <div>
+                        <h3 class="font-bold text-lg text-green-800">María López</h3>
+                        <p class="text-gray-700 text-sm mb-1">Secretaria de Desarrollo Social</p>
+                        <a href="mailto:desarrollosocial@tilisarao.gob.ar" class="text-blue-600 font-semibold flex items-center gap-1 text-sm"><i class="fas fa-envelope"></i> desarrollosocial@tilisarao.gob.ar</a>
+                    </div>
+                </div>
+                <!-- Funcionario ejemplo -->
+                <div class="bg-white rounded-lg shadow flex items-center p-4 gap-4 border-l-8 border-yellow-800">
+                    <img src="https://ui-avatars.com/api/?name=Pedro+Gomez&background=fbbf24&color=fff&size=80" alt="Funcionario" class="w-20 h-20 rounded-lg object-cover">
+                    <div>
+                        <h3 class="font-bold text-lg text-yellow-800">Pedro Gómez</h3>
+                        <p class="text-gray-700 text-sm mb-1">Director de Obras Públicas</p>
+                        <a href="mailto:obraspublicas@tilisarao.gob.ar" class="text-blue-600 font-semibold flex items-center gap-1 text-sm"><i class="fas fa-envelope"></i> obraspublicas@tilisarao.gob.ar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
